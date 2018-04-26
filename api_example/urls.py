@@ -15,14 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from languages2.views import LanguageView
-from oilPrice.views import OilPriceView
 from rest_framework import routers
 from ProductReview.views import ProductReviewView
 
 routers = routers.DefaultRouter()
-routers.register('language', LanguageView)
-routers.register('oilPrice', OilPriceView)
 routers.register('ProductReview', ProductReviewView)
 
 urlpatterns = [
