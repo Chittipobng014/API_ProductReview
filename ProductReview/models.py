@@ -5,3 +5,5 @@ class ProductReview(models.Model):
     comment = models.name = models.CharField(max_length=256)
     date = models.DateTimeField(auto_now_add=True, blank=True)
     productID = models.IntegerField()
+    reviewer = models.name = models.CharField(max_length=256, default='')
+   
