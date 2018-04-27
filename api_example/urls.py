@@ -23,5 +23,5 @@ routers.register('ProductReview', ProductReviewView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(routers.urls))
+    path('api/', include(routers.urls))
 ]
