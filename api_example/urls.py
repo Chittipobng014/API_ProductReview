@@ -18,12 +18,14 @@ from django.urls import path, include
 from rest_framework import routers
 from ProductReview.views import ProductReviewView
 
+
 routers = routers.DefaultRouter()
 routers.register('ProductReview', ProductReviewView)
+routers.register('getbyid/<int:id>', ProductReviewView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(routers.urls))
+    path('api/', include(routers.urls)),
 ]
 
 #hello
