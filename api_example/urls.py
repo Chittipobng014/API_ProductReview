@@ -21,7 +21,7 @@ from ProductReview.views import ProductReviewView
 
 routers = routers.DefaultRouter()
 routers.register('ProductReview', ProductReviewView)
-routers.register('getbyid/<int:id>', ProductReviewView)
+routers.register('getbyid/<int:id>', ProductReviewView.getbyPid, base_name = "productID")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
